@@ -4,17 +4,29 @@ The applications come from verified sources such as the official AUR website and
 Tested on XFCE DE
 The script will install:
 
--Silos                              -Adobe Acrobat 
+-Silos                              
 
--Snapd                              -Microsoft Teams
+-Adobe Acrobat 
 
--NordVPN CLI                        -Balena Etcher
+-Snapd                              
 
--PlayOnLinux                        -Visual Studio Code
+-Microsoft Teams
 
--Discord                            -Spotify
+-NordVPN CLI                        
 
--GeForce Now                        -Telegram Desktop
+-Balena Etcher
+
+-PlayOnLinux                        
+
+-Visual Studio Code
+
+-Discord                            
+
+-Spotify
+
+-GeForce Now                        
+
+-Telegram Desktop
 
 -Whatsapp Desktop
 
