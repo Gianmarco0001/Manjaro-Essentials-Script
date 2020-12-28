@@ -5,21 +5,35 @@ Tested on XFCE DE
 The script will install:
 
 -Silos
+
 -Snapd
+
 -Microsoft Teams
+
 -NordVPN CLI
+
 -Balena Etcher
+
 -PlayOnLinux
+
 -Visual Studio Code
+
 -Discord
+
 -Spotify
+
 -GeForce Now
+
 -Firefox
+
 -Adobe Acrobat 
+
 -Telegram Desktop
+
 -Whatsapp Desktop
 
 ***************INSTRUCTION***************
 
 chmod +x MES.sh 
+
 ./MES.sh
