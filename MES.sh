@@ -182,11 +182,11 @@ echo -e -n "\033[1;32mIf you are a gamer you will probably need discord (y/n)"
 echo -e -n '\e[0;0m'
 read CONT
 if [ "$CONT" = "y" ]; then
-  echo -e"${LIGHTGREEN}let's install it then${NOCOLOR}";
+  echo -e "${LIGHTGREEN}let's install it then${NOCOLOR}";
   sudo snap install discord
-  echo -e"${LIGHTGREEN}Done! Discord is ready for you${NOCOLOR}"
+  echo -e "${LIGHTGREEN}Done! Discord is ready for you${NOCOLOR}"
 else
-  echo -e"${LIGHTGREEN}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+  echo -e "${LIGHTGREEN}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 fi
 
 #Install Spotify
