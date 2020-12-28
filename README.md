@@ -20,3 +20,8 @@ The script will install:
 -Telegram Desktop
 -Whatsapp Desktop
 
+***************INSTRUCTION***************
+
+chmod +x MES.sh
+./MES.sh
+
