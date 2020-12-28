@@ -89,21 +89,7 @@ makepkg -sci
 cd ~/manjaro_script_tools/
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
-# Add black arch repository to manjaro packet manager
 
-echo -e -n "\033[1;32m Do you need pentesting tools? (y/n) "
-echo -e -n '\e[0;0m'
-read CONT
-if [ "$CONT" = "y" ]; then
-  echo -e "${LIGHTGREEN}let's add the black arch repository to your packet manager then${NOCOLOR}";
-  sudo curl -O https://blackarch.org/strap.sh  
-  chmod +x strap.sh  
-  ./strap.sh
-  echo -e "${LIGHTGREEN}Done! Check your packet manager now${NOCOLOR}"
-  exit
-else
-  echo -e "${LIGHTGREEN}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
-fi
 
 #Install Microsoft Teams
 echo -e -n "\033[1;32mIf you are a student maybe you need Microsoft Teams (y/n)"
@@ -244,7 +230,7 @@ if [ "$CONT" = "y" ]; then
 	echo -e "${LIGHTGREEN}Done! Adobe Acrobat is ready for you${NOCOLOR}"
 else
 	echo -e "${LIGHTGREEN} Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
-
+fi
 #Install Telegram Desktop
 
 echo -e -n "\033[1;32mDo you need a Telegram Desktop? (one of the most popular messaging apps) (y/n)"
@@ -256,7 +242,7 @@ if [ "$CONT" = "y" ]; then
 	echo -e "${LIGHTGREEN}Done! Telegram is ready for you${NOCOLOR}"
 else
 	echo -e "${LIGHTGREEN} Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
-
+fi
 #Install Whatsapp Desktop
 
 echo -e -n "\033[1;32mDo you need a Whatsapp Desktop? (one of the most popular messaging apps) (y/n)"
@@ -293,15 +279,4 @@ if [ "$CONT" = "y" ]; then
 else
   echo -e "${LIGHTGREEN}Oh ok no problem, Reboot it later${NOCOLOR}";
 fi
-
-
-
-
-
-
-
-
-
-
-
 
