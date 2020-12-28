@@ -6,7 +6,6 @@ The script will install:
 
 -Silos
 -Snapd
--Black Arch repository
 -Microsoft Teams
 -NordVPN CLI
 -Balena Etcher
