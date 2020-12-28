@@ -41,7 +41,7 @@ ___  ___            _                   _____                   _   _       _   
 
 
 EOF
-echo -e "${LIGHTGREEN}Looking for the fastest mirror, please wait!${NOCOLOR}"
+echo -e "${LIGHTGREEN}Looking for the fastest mirror, please wait! (CTRL-C to stop it)${NOCOLOR}"
 sudo pacman-mirrors --fasttrack
 sudo pacman -Sy
 sudo pacman -Syu
@@ -91,10 +91,14 @@ sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 # Add black arch repository to manjaro packet manager
 
-read -p -e "${LIGHTGREEN}Do you need pentesting tools? (y/n)?${NOCOLOR}" CONT
+echo -e -n "\033[1;32m Do you need pentesting tools? (y/n) "
+echo -e -n '\e[0;0m'
+read CONT
 if [ "$CONT" = "y" ]; then
   echo -e "${LIGHTGREEN}let's add the black arch repository to your packet manager then${NOCOLOR}";
-  sudo su && curl -O https://blackarch.org/strap.sh && chmod +x strap.sh && ./strap.sh
+  sudo curl -O https://blackarch.org/strap.sh  
+  chmod +x strap.sh  
+  ./strap.sh
   echo -e "${LIGHTGREEN}Done! Check your packet manager now${NOCOLOR}"
   exit
 else
@@ -102,8 +106,9 @@ else
 fi
 
 #Install Microsoft Teams
-
-read -p -e"${LIGHTGREEN}If you are a student maybe you need Microsoft Teams (y/n)${NOCOLOR}" CONT
+echo -e -n "\033[1;32mIf you are a student maybe you need Microsoft Teams (y/n)"
+echo -e -n '\e[0;0m'
+read CONT
 if [ "$CONT" = "y" ]; then
   echo -e "${LIGHTGREEN}let's install it then${NOCOLOR}";
   git clone https://aur.archlinux.org/teams.git
@@ -116,8 +121,9 @@ else
 fi
 
 #Install NordVPN CLI Version
-
-read -p -e"${LIGHTGREEN}Yo mate, do you need NordVPN for extra protection? (y/n)${NOCOLOR}" CONT
+echo -e -n "\033[1;32mYo mate, do you need NordVPN for extra protection? (y/n)"
+echo -e -n '\e[0;0m'
+read CONT
 if [ "$CONT" = "y" ]; then
   echo -e "${LIGHTGREEN}let's install it then${NOCOLOR}";
   git clone https://aur.archlinux.org/nordvpn-bin.git
@@ -139,7 +145,9 @@ fi
 
 #Install Balena Etcher
 
-read -p -e "${LIGHTGREEN}Now is time for Balena Etcher, this program will allow you to flash OS images to flash drives and sd cards quickly and safely.. Do you want it?  (y/n)${NOCOLOR}" CONT
+echo -e -n "\033[1;32mNow is time for Balena Etcher, this program will allow you to flash OS images to flash drives and sd cards quickly and safely.. Do you want it?  (y/n)"
+echo -e -n '\e[0;0m'
+read CONT
 if [ "$CONT" = "y" ]; then
   echo -e "${LIGHTGREEN}let's install it then${NOCOLOR}";
   git clone https://aur.archlinux.org/etcher-bin.git
@@ -154,8 +162,9 @@ fi
 
 #Install PlayOnLinux
 
-
-read -p -e "${LIGHTGREEN}I have this very useful tool to offer you. It will allow you to install some applications present in the Windows environment, it is PlayOnLinux, do you need it?  (y/n)${NOCOLOR}" CONT
+echo -e -n "\033[1;32mI have this very useful tool to offer you. It will allow you to install some applications present in the Windows environment, it is PlayOnLinux, do you need it?  (y/n)"
+echo -e -n '\e[0;0m'
+read CONT
 if [ "$CONT" = "y" ]; then
   echo -e "${LIGHTGREEN}let's install it then${NOCOLOR}";
   sudo pacman -S playonlinux
@@ -166,7 +175,9 @@ fi
 
 #Install Visual Studio Code
 
-read -p -e "${LIGHTGREEN} If you are a programmer I have this program for you, Visual Studio Code. Do you need it?  (y/n)${NOCOLOR}" CONT
+echo -e -n "\033[1;32m If you are a programmer I have this program for you, Visual Studio Code. Do you need it?  (y/n)"
+echo -e -n '\e[0;0m'
+read CONT
 if [ "$CONT" = "y" ]; then
   echo -e "${LIGHTGREEN}let's install it then${NOCOLOR}";
   git clone https://aur.archlinux.org/visual-studio-code-bin.git
@@ -181,7 +192,9 @@ fi
 
 #Install Discord
 
-read -p -e "${LIGHTGREEN}if you are a gamer you will probably need discord (y/n)${NOCOLOR}" CONT
+echo -e -n "\033[1;32mIf you are a gamer you will probably need discord (y/n)"
+echo -e -n '\e[0;0m'
+read CONT
 if [ "$CONT" = "y" ]; then
   echo -e"${LIGHTGREEN}let's install it then${NOCOLOR}";
   sudo snap install discord
@@ -192,7 +205,9 @@ fi
 
 #Install Spotify
 
-read -p -e"${LIGHTGREEN}I love music and you? I have the Spotify app for you (y/n)" CONT
+echo -e -n "\033[1;32mI love music and you? I have the Spotify app for you (y/n)"
+echo -e -n '\e[0;0m'
+read CONT
 if [ "$CONT" = "y" ]; then
   echo -e "${LIGHTGREEN}let's install it then${NOCOLOR}";
   sudo snap install spotify
@@ -203,7 +218,9 @@ fi
 
 #Install GeForce Now
 
-read -p -e "${LIGHTGREEN}Hey gamer, do you need GeForce Now? (y/n)${NOCOLOR}" CONT
+echo -e -n "\033[1;32mHey gamer, do you need GeForce Now? (y/n)"
+echo -e -n '\e[0;0m'
+read CONT
 if [ "$CONT" = "y" ]; then
   echo -e"${LIGHTGREEN}let's install it then${NOCOLOR}";
   sudo snap install geforcenow
@@ -215,8 +232,9 @@ fi
 	
 #Install adobe acrobat pdf reader
 
-
-read -p "${LIGHTGREEN}Do you need a PDF Reader? (y/n)${NOCOLOR}" CONT
+echo -e -n "\033[1;32mDo you need a PDF Reader? (y/n)"
+echo -e -n '\e[0;0m'
+read CONT
 if [ "$CONT" = "y" ]; then
 	echo -e "${LIGHTGREEN}let's install Adobe Acrobat then${NOCOLOR}";
 	git clone https://aur.archlinux.org/acroread.git
@@ -229,7 +247,9 @@ else
 
 #Install Telegram Desktop
 
-read -p -e "${LIGHTGREEN}Do you need a Telegram Desktop? (one of the most popular messaging apps) (y/n)${NOCOLOR}" CONT
+echo -e -n "\033[1;32mDo you need a Telegram Desktop? (one of the most popular messaging apps) (y/n)"
+echo -e -n '\e[0;0m'
+read CONT 
 if [ "$CONT" = "y" ]; then
 	echo -e "${LIGHTGREEN}let's install Telegram Desktop${NOCOLOR}";
 	sudo snap install telegram-desktop
@@ -239,7 +259,9 @@ else
 
 #Install Whatsapp Desktop
 
-read -p -e "${LIGHTGREEN}Do you need a Whatsapp Desktop? (one of the most popular messaging apps) (y/n)${NOCOLOR}" CONT
+echo -e -n "\033[1;32mDo you need a Whatsapp Desktop? (one of the most popular messaging apps) (y/n)"
+echo -e -n '\e[0;0m'
+read CONT 
 if [ "$CONT" = "y" ]; then
 	echo -e "let's install Whatsapp Desktop${NOCOLOR}";
 	git clone https://aur.archlinux.org/whatsapp-for-linux.git
@@ -250,13 +272,20 @@ if [ "$CONT" = "y" ]; then
 else
 	echo -e "${LIGHTGREEN} Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 
+# End
+
 echo -e "${LIGHTGREEN}DONE!! This is the end of the script, please reboot the system!${NOCOLOR}"
 
 echo -e "${LIGHTGREEN}But first, let's do a quick update...${NOCOLOR}"
 sudo pacman -Sy && sudo pacman -Syu && sudo pacman -Syuu
 echo -e "${LIGHTGREEN}This Script is made by ----------------MrCodeBlocks-----------------${NOCOLOR}"
 echo -e "${LIGHTGREEN}Check also this site https://archlinux.org/ for other apps${NOCOLOR}"
-read -p "${LIGHTGREEN}Reboot the system now? (y/n)${NOCOLOR}" CONT
+
+#Time for reboot and cheers
+
+echo -e -n "\033[1;32mReboot the system now? (y/n)"
+echo -e -n '\e[0;0m'
+read CONT 
 if [ "$CONT" = "y" ]; then
   echo -e "${LIGHTGREEN}Ok thanks!${NOCOLOR}";
   sudo reboot 0
