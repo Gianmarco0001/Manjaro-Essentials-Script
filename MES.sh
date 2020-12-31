@@ -103,7 +103,7 @@ if [ "$CONT" = "y" ]; then
   cd ~/manjaro_script_tools/
   echo  -e "${LIGHTGREEN}Done! Teams is ready for you${NOCOLOR}"
 else
-  echo -e "${LIGHTGREEN}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+  echo -e "${LIGHTBLUE}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 fi
 
 #Install NordVPN CLI Version
@@ -126,7 +126,7 @@ if [ "$CONT" = "y" ]; then
   systemctl start nordvpnd.service
   echo -e "${LIGHTGREEN}Done! NordVPN is ready${NOCOLOR}"
 else
-  echo -e "${LIGHTGREEN}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+  echo -e "${LIGHTBLUE}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 fi
 
 #Install Balena Etcher
@@ -143,12 +143,12 @@ if [ "$CONT" = "y" ]; then
   cd ~/manjaro_script_tools/
   echo -e "${LIGHTGREEN}Done! Balena Etcher is ready for you${NOCOLOR}"
 else
-  echo -e "${LIGHTGREEN}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+  echo -e "${LIGHTBLUE}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 fi
 
 #Install PlayOnLinux
 
-echo -e -n "\033[1;32mI have this very useful tool to offer you. It will allow you to install some applications present in the Windows environment, it is PlayOnLinux, do you need it?  (y/n)"
+echo -e -n "\033[1;32mI have this very useful tool to offer youm PlayOnLinux. It will allow you to install some applications present in the Windows environment. (y/n)"
 echo -e -n '\e[0;0m'
 read CONT
 if [ "$CONT" = "y" ]; then
@@ -156,12 +156,12 @@ if [ "$CONT" = "y" ]; then
   sudo pacman -S playonlinux
   echo -e "${LIGHTGREEN}Done! Balena Etcher is ready for you${NOCOLOR}"
 else
-  echo -e "${LIGHTGREEN}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+  echo -e "${LIGHTBLUE}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 fi
 
 #Install Visual Studio Code
 
-echo -e -n "\033[1;32m If you are a programmer I have this program for you, Visual Studio Code. Do you need it?  (y/n)"
+echo -e -n "\033[1;32m If you are a programmer, I have this program for you, Visual Studio Code. Do you need it?  (y/n)"
 echo -e -n '\e[0;0m'
 read CONT
 if [ "$CONT" = "y" ]; then
@@ -172,7 +172,7 @@ if [ "$CONT" = "y" ]; then
   cd ~/manjaro_script_tools/
   echo -e "${LIGHTGREEN}Done! Visual Studio Code is ready for you!${NOCOLOR}"
 else
-  echo -e "${LIGHTGREEN}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+  echo -e "${LIGHTBLUE}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 fi
 
 
@@ -186,7 +186,7 @@ if [ "$CONT" = "y" ]; then
   sudo snap install discord
   echo -e "${LIGHTGREEN}Done! Discord is ready for you${NOCOLOR}"
 else
-  echo -e "${LIGHTGREEN}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+  echo -e "${LIGHTBLUE}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 fi
 
 #Install Spotify
@@ -199,7 +199,7 @@ if [ "$CONT" = "y" ]; then
   sudo snap install spotify
   echo -e "${LIGHTGREEN}Done! Spotify is ready for you${NOCOLOR}"
 else
-  echo -e "${LIGHTGREEN}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+  echo -e "${LIGHTBLUE}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 fi
 
 #Install GeForce Now
@@ -208,11 +208,11 @@ echo -e -n "\033[1;32mHey gamer, do you need GeForce Now? (y/n)"
 echo -e -n '\e[0;0m'
 read CONT
 if [ "$CONT" = "y" ]; then
-  echo -e"${LIGHTGREEN}let's install it then${NOCOLOR}";
+  echo -e "${LIGHTGREEN}let's install it then${NOCOLOR}";
   sudo snap install geforcenow
-  echo -e"${LIGHTGREEN}Done! Discord is ready for you${NOCOLOR}"
+  echo -e "${LIGHTGREEN}Done! Discord is ready for you${NOCOLOR}"
 else
-  echo -e "${LIGHTGREEN}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+  echo -e "${LIGHTBLUE}Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 fi
 
 	
@@ -229,7 +229,7 @@ if [ "$CONT" = "y" ]; then
 	cd ~/manjaro_script_tools/
 	echo -e "${LIGHTGREEN}Done! Adobe Acrobat is ready for you${NOCOLOR}"
 else
-	echo -e "${LIGHTGREEN} Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+	echo -e "${LIGHTBLUE} Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 fi
 #Install Telegram Desktop
 
@@ -241,8 +241,9 @@ if [ "$CONT" = "y" ]; then
 	sudo snap install telegram-desktop
 	echo -e "${LIGHTGREEN}Done! Telegram is ready for you${NOCOLOR}"
 else
-	echo -e "${LIGHTGREEN} Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+	echo -e "${LIGHTBLUE} Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
 fi
+
 #Install Whatsapp Desktop
 
 echo -e -n "\033[1;32mDo you need a Whatsapp Desktop? (one of the most popular messaging apps) (y/n)"
@@ -256,16 +257,17 @@ if [ "$CONT" = "y" ]; then
 	cd ~/manjaro_script_tools/
 	echo -e "${LIGHTGREEN}Done! Whatsapp is ready for you${NOCOLOR}"
 else
-	echo -e "${LIGHTGREEN} Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
-
+	echo -e "${LIGHTBLUE} Oh ok no problem, I have other interesting stuff for you!${NOCOLOR}";
+fi
 # End
 
-echo -e "${LIGHTGREEN}DONE!! This is the end of the script, please reboot the system!${NOCOLOR}"
+echo -e "${RED}DONE!! This is the end of the script, please reboot the system!${NOCOLOR}"
 
 echo -e "${LIGHTGREEN}But first, let's do a quick update...${NOCOLOR}"
 sudo pacman -Sy && sudo pacman -Syu && sudo pacman -Syuu
-echo -e "${LIGHTGREEN}This Script is made by ----------------MrCodeBlocks-----------------${NOCOLOR}"
-echo -e "${LIGHTGREEN}Check also this site https://archlinux.org/ for other apps${NOCOLOR}"
+echo -e "${LIGHTRED}This Script is made by ----------------MrCodeBlocks-----------------${NOCOLOR}"
+echo -e "${LIGHTRED}Check also this site https://archlinux.org/ for other apps${NOCOLOR}"
+echo -e "${LIGHTRED}Put also a Star on my GitHub Project and share it! Thanks!${NOCOLOR}"
 
 #Time for reboot and cheers
 
@@ -274,9 +276,19 @@ echo -e -n '\e[0;0m'
 read CONT 
 if [ "$CONT" = "y" ]; then
   echo -e "${LIGHTGREEN}Ok thanks!${NOCOLOR}";
-  sudo reboot 0
   echo -e "${LIGHTGREEN}See Ya${NOCOLOR}"
-else
+  sudo reboot 0
+  else
   echo -e "${LIGHTGREEN}Oh ok no problem, Reboot it later${NOCOLOR}";
 fi
+
+
+
+
+
+
+
+
+
+
 
