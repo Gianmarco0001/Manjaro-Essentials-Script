@@ -31,6 +31,9 @@ The script will install:
 -Whatsapp Desktop
 
 ***************INSTRUCTION***************
+git clone https://github.com/Gianmarco0001/Manjaro-Essentials-Script.git
+
+cd Manjaro-Essentials-Script
 
 chmod +x MES.sh 
 
